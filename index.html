@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Javascript</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Bulb Program</h1>
+    <img id='bulb' onclick='changeImage()' src='2.jpg' width="300" height="400">
+    <h4 id='demo'>Click to turn off/on</h4>
+    <em><strong>PS:</strong>don't switch it on and off more than 10 times</em>
+    <script>
+    var count=0;
+      function changeImage(){
+        var image = document.getElementById('bulb');
+        if(image.src.match('1.jpg')){
+          image.src='2.jpg';
+          count++;
+          if (count===10) {
+            image.src='3.jpg';
+            }
+          }
+        else{
+          image.src='1.jpg';
+          count++;
+          if (count===10) {
+            image.src='3.jpg';
+            }
+          }
+      }
+    </script>
+  </body>
+</html>
