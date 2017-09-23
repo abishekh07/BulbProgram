@@ -9,7 +9,7 @@
     <h1>Bulb Program</h1>
     <img id='bulb' onclick='changeImage()' src='2.jpg' width="300" height="400">
     <h4 id='demo'>Click to turn off/on</h4>
-    <em><strong>PS:</strong>don't switch it on and off more than 10 times</em>
+    <p id='id'><em><strong>PS:</strong> don't switch it on and off more than 10 times</em></p>
     <script>
     var count=0;
       function changeImage(){
@@ -19,6 +19,8 @@
           count++;
           if (count===10) {
             image.src='3.jpg';
+            count=0;
+            document.getElementById('id').innerHTML="I warned you bitch !";
             }
           }
         else{
@@ -26,6 +28,8 @@
           count++;
           if (count===10) {
             image.src='3.jpg';
+            count=0;
+            document.getElementById('id').innerHTML="Genius Level : Over 9000";
             }
           }
       }
